@@ -3,19 +3,19 @@ const API_URL = 'http://localhost:8080';
 async function translateToFrench() {
     textToTranslate = document.getElementById("textToTranslate").value;
     const data = await getData({route: 'englishToFrench', textToTranslate});
-    document.querySelector("#translated_text").innerHTML = data;
+    document.querySelector("#translated_text").innerHTML = data[0].translation;
 }
 
 
 async function translateToEnglish() {
     textToTranslate = document.getElementById("textToTranslate").value;
     const data = await getData({route: 'frenchToEnglish', textToTranslate});
-    document.querySelector("#translated_text").innerHTML = data;
+    document.querySelector("#translated_text").innerHTML = data[0].translation;
 }
 async function translateToSpanish() {
     textToTranslate = document.getElementById("textToTranslate").value;
     const data = await getData({route: 'englishToSpanish', textToTranslate});
-    document.querySelector("#translated_text").innerHTML = data;    
+    document.querySelector("#translated_text").innerHTML = data[0].translation;  
 }
 function getData({route, textToTranslate})
 {
