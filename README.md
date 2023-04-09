@@ -11,4 +11,4 @@
 - Flask
 - Package creating
 - unittest (for unit testing)
-- IBM Watson
+- IBM cloud (Watson: text-translation)
